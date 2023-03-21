@@ -9,6 +9,6 @@ You should be familiar with:
 See https://en.wikipedia.org/wiki/Inverse_function and 
 https://www.math.utah.edu/lectures/math1220/2PostNotes.pdf Page2
 
-(3) the properties of increasing function $f(x)$: $a<b \Longleftrightarrow f(a)<f(b)$
+(3) the properties of increasing function $f(x)$: $$a<b \Longleftrightarrow f(a)<f(b)$$
 
 (4) the CDF of the continuous Uniform Distribution between 0 and 1: $F_U(u)=u$ when $0<u<1$, $F_U(u)=1$ when $u\geq 1$, $F_U(u)=0$ when $u\leq 0$.
