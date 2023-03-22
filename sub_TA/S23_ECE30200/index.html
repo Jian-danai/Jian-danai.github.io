@@ -226,6 +226,343 @@
 
           <p>For submission, please submit a ZIP that includes a PDF of your derivation in Q1&2 and plots(plot both the pdf function(analytical) and histogram(numerical) in one figure so that they can be compared with each other) in Q3; a MATLAB/Python3 file which includes runnable code for Q3.</p>
 
+          <h1>HW5 HINTs</h1>
+          <h2>Q1:</h2>
+          <p>Take (d)(ii) as an example, <math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&lt;</mo>
+              <msup>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msup>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&lt;</mo>
+              <msup>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>∩</mo>
+              <mi>Y</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0,1</mn>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo>∩</mo>
+              <mi>X</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0,1</mn>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0</mn>
+              <mo separator="true">,</mo>
+              <msup>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msup>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo>∩</mo>
+              <mi>X</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0,1</mn>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msubsup>
+                <mo movablelimits="false">∫</mo>
+                <mn>0</mn>
+                <mn>1</mn>
+              </msubsup>
+              <msubsup>
+                <mo movablelimits="false">∫</mo>
+                <mn>0</mn>
+                <msup>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msup>
+              </msubsup>
+              <msub>
+                <mi>f</mi>
+                <mrow>
+                  <mi>X</mi>
+                  <mo separator="true">,</mo>
+                  <mi>Y</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo separator="true">,</mo>
+              <mi>y</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>d</mi>
+              <mi>y</mi>
+              <mi>d</mi>
+              <mi>x</mi>
+            </mrow>
+          </math></p>
+          <p>Alternatively, you can solve it by: <math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&lt;</mo>
+              <msup>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msup>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&lt;</mo>
+              <msup>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>∩</mo>
+              <mi>Y</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0,1</mn>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo>∩</mo>
+              <mi>X</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0,1</mn>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0,1</mn>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo>∩</mo>
+              <mi>X</mi>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">[</mo>
+              <msqrt>
+                <mi>Y</mi>
+              </msqrt>
+              <mo separator="true">,</mo>
+              <mn>1</mn>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msubsup>
+                <mo movablelimits="false">∫</mo>
+                <mn>0</mn>
+                <mn>1</mn>
+              </msubsup>
+              <msubsup>
+                <mo movablelimits="false">∫</mo>
+                <msqrt>
+                  <mi>y</mi>
+                </msqrt>
+                <mn>1</mn>
+              </msubsup>
+              <msub>
+                <mi>f</mi>
+                <mrow>
+                  <mi>X</mi>
+                  <mo separator="true">,</mo>
+                  <mi>Y</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo separator="true">,</mo>
+              <mi>y</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>d</mi>
+              <mi>x</mi>
+              <mi>d</mi>
+              <mi>y</mi>
+            </mrow>
+          </math></p>
+          <h2>Q2:</h2>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>C</mi>
+              <mi>o</mi>
+              <mi>v</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>X</mi>
+              <mo separator="true">,</mo>
+              <mi>Y</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mn>0</mn>
+              <mo stretchy="false">⇒</mo>
+              <mi>U</mi>
+              <mi>n</mi>
+              <mi>c</mi>
+              <mi>o</mi>
+              <mi>r</mi>
+              <mi>r</mi>
+              <mi>e</mi>
+              <mi>l</mi>
+              <mi>a</mi>
+              <mi>t</mi>
+              <mi>e</mi>
+              <mi>d</mi>
+            </mrow>
+          </math></p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>E</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>X</mi>
+              <mi>Y</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mn>0</mn>
+              <mo stretchy="false">⇒</mo>
+              <mi>O</mi>
+              <mi>r</mi>
+              <mi>t</mi>
+              <mi>h</mi>
+              <mi>o</mi>
+              <mi>g</mi>
+              <mi>o</mi>
+              <mi>n</mi>
+              <mi>a</mi>
+              <mi>l</mi>
+            </mrow>
+          </math></p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>f</mi>
+                <mrow>
+                  <mi>X</mi>
+                  <mo separator="true">,</mo>
+                  <mi>Y</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo separator="true">,</mo>
+              <mi>y</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msub>
+                <mi>f</mi>
+                <mi>X</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>⋅</mo>
+              <msub>
+                <mi>f</mi>
+                <mi>Y</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>y</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo stretchy="false">⇒</mo>
+              <mi>I</mi>
+              <mi>n</mi>
+              <mi>d</mi>
+              <mi>e</mi>
+              <mi>p</mi>
+              <mi>e</mi>
+              <mi>n</mi>
+              <mi>d</mi>
+              <mi>e</mi>
+              <mi>n</mi>
+              <mi>t</mi>
+            </mrow>
+          </math></p>
+          <h2>Q3:</h2>
+          <h3>(b):</h3>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&gt;</mo>
+              <mi>X</mi>
+              <mi>|</mi>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msubsup>
+                <mo movablelimits="false">∫</mo>
+                <mi>x</mi>
+                <mn>1</mn>
+              </msubsup>
+              <msub>
+                <mi>f</mi>
+                <mrow>
+                  <mi>Y</mi>
+                  <mi>|</mi>
+                  <mi>X</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>y</mi>
+              <mi>|</mi>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>d</mi>
+              <mi>y</mi>
+            </mrow>
+          </math></p>
+          <h3>(c):</h3>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&gt;</mo>
+              <mi>X</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msubsup>
+                <mo movablelimits="false">∫</mo>
+                <mn>0</mn>
+                <mn>1</mn>
+              </msubsup>
+              <mi>P</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&gt;</mo>
+              <mi>X</mi>
+              <mi>|</mi>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>⋅</mo>
+              <msub>
+                <mi>f</mi>
+                <mi>X</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>d</mi>
+              <mi>x</mi>
+            </mrow>
+          </math></p>
         </p>
       </tr>
       </table>
