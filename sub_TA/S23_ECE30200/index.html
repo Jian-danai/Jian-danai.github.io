@@ -868,6 +868,545 @@
               <mi>x</mi>
             </mrow>
           </math></p>
+          <h1>HW6 HINTs</h1>
+          <h2>Q1:</h2>
+          <h3>(b):</h3>
+          <p>Use either density method(with an auxiliary variable) or distribution method. (See Lec27-29)</p>
+          <p>Please note that fz(z) should have different expressions for z in range (0,1) and (1,2).</p>
+          <h3>(c):</h3>
+          <p>The convolution can be defined as: 
+            <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>f</mi>
+                <mi>X</mi>
+              </msub>
+              <mo>*</mo>
+              <msub>
+                <mi>f</mi>
+                <mi>Y</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>z</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msubsup>
+                <mo movablelimits="false">∫</mo>
+                <mrow>
+                  <mo>−</mo>
+                  <mi>∞</mi>
+                </mrow>
+                <mi>∞</mi>
+              </msubsup>
+              <msub>
+                <mi>f</mi>
+                <mi>X</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <msub>
+                <mi>f</mi>
+                <mi>Y</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>z</mi>
+              <mo>−</mo>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>d</mi>
+              <mi>x</mi>
+            </mrow>
+            </math>
+          </p>
+          <p>The integral value range of x is determined by:</p>
+          <p><math display="block" style="display:inline-block;">
+          <mrow>
+            <mn>0</mn>
+            <mo>≤</mo>
+            <mi>x</mi>
+            <mo>≤</mo>
+            <mn>1,0</mn>
+            <mo>≤</mo>
+            <mi>z</mi>
+            <mo>−</mo>
+            <mi>x</mi>
+            <mo>≤</mo>
+            <mn>1</mn>
+          </mrow>
+          </math> because for marginal PDF of x and y, the variable x and y are required to be in the range of (0,1).</p>
+          <h2>Q2:</h2>
+          <h3>(a):</h3>
+          <p>Define U:={the time when the packet has arrived on one of the paths}, T1:={the time when the packet has arrived on path1}, 
+            T2:={the time when the packet has arrived on path2}, by knowing that T1 and T2 are independent, you can first find CDF of U by:</p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>F</mi>
+                <mi>U</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>U</mi>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>m</mi>
+              <mi>i</mi>
+              <mi>n</mi>
+              <mo form="prefix" stretchy="false">{</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo form="postfix" stretchy="false">}</mo>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>∪</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>+</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>−</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>∩</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>+</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>−</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mn>1</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>+</mo>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mn>2</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>−</mo>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mn>1</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mn>2</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math></p>
+          <p>Then take the derivative of u to get PDF of U.</p>
+          <h3>(b):</h3>
+          <p>Define V:={the time when the packet has arrived on both of the paths}, by knowing that T1 and T2 are independent, you can first find CDF of V by:</p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>F</mi>
+                <mi>V</mi>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>V</mi>
+              <mo>≤</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>m</mi>
+              <mi>a</mi>
+              <mi>x</mi>
+              <mo form="prefix" stretchy="false">{</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo form="postfix" stretchy="false">}</mo>
+              <mo>≤</mo>
+              <mi>u</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>∩</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>T</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mn>1</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mn>2</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>v</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math></p>
+          <p>Then take the derivative of v to get PDF of V.</p>
+          <h3>(c):</h3>
+          <p>By using the PDF of U and V, solve E[V-U]=E[V]-E[U]</p>
+          <h2>Q3</h2>
+          <h3>(d) and (e):</h3>
+          <p>Method1: By having the joint PDF of V and W from (c), solve marginal PDF of W, and then solve the conditional PDF of V given W by:</p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>f</mi>
+                <mrow>
+                  <mi>V</mi>
+                  <mi>|</mi>
+                  <mi>W</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>v</mi>
+              <mi>|</mi>
+              <mi>w</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <msub>
+                    <mi>f</mi>
+                    <mrow>
+                      <mi>V</mi>
+                      <mo separator="true">,</mo>
+                      <mi>W</mi>
+                    </mrow>
+                  </msub>
+                  <mo form="prefix" stretchy="false">(</mo>
+                  <mi>v</mi>
+                  <mo separator="true">,</mo>
+                  <mi>w</mi>
+                  <mo form="postfix" stretchy="false">)</mo>
+                </mrow>
+                <mrow>
+                  <msub>
+                    <mi>f</mi>
+                    <mi>W</mi>
+                  </msub>
+                  <mo form="prefix" stretchy="false">(</mo>
+                  <mi>w</mi>
+                  <mo form="postfix" stretchy="false">)</mo>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math></p>
+          <p>Method2 (Simpler): By having E[V], E[W], Var[V], Var[W], and correlation coefficient of V and W, you should be able to utilize the formula in Lec30 Page4 to solve the conditional PDF of V given W.</p>
+          <h2>Q4</h2>
+          <h3>(b):</h3>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>P</mi>
+                <mi>e</mi>
+              </msub>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>e</mi>
+              <mi>r</mi>
+              <mi>r</mi>
+              <mi>o</mi>
+              <mi>r</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>f</mi>
+              <mi>a</mi>
+              <mi>l</mi>
+              <mi>s</mi>
+              <mi>e</mi>
+              <mi>a</mi>
+              <mi>l</mi>
+              <mi>a</mi>
+              <mi>r</mi>
+              <mi>m</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>H</mi>
+                <mn>0</mn>
+              </msub>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>+</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mn>1</mn>
+              <mo>−</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>D</mi>
+              <mi>e</mi>
+              <mi>t</mi>
+              <mi>e</mi>
+              <mi>c</mi>
+              <mi>t</mi>
+              <mi>i</mi>
+              <mi>o</mi>
+              <mi>n</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>H</mi>
+                <mn>1</mn>
+              </msub>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math></p>
+          <h2>Q5</h2>
+          <p>Solve the following:</p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>E</mi>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mi>X</mi>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo separator="true">,</mo>
+              <mi>E</mi>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mi>Y</mi>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>σ</mi>
+                <mi>x</mi>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>σ</mi>
+                <mi>y</mi>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>ρ</mi>
+                <mrow>
+                  <mi>x</mi>
+                  <mi>y</mi>
+                </mrow>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>f</mi>
+                <mrow>
+                  <mi>Y</mi>
+                  <mi>|</mi>
+                  <mi>X</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>y</mi>
+              <mi>|</mi>
+              <mi>x</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math></p>
+          <p>Then, find the LMMSE, MMSE, MAP for "Y given X" by using formulas in Lec32-33.</p>
+
         </p>
       </tr>
       </table>
