@@ -872,7 +872,7 @@
           <h2>Q1:</h2>
           <h3>(b):</h3>
           <p>Use either density method(with an auxiliary variable) or distribution method. (See Lec27-29)</p>
-          <p>Please note that fz(z) should have different expressions for z in range (0,1) and (1,2).</p>
+          <p>Please note that fz(z) should have different expressions for z in range (0,1) and (1,2). Check details <a href="https://jian-danai.github.io/sub_TA/S23_ECE30200/imgs/Hw6_q1_b.pdf">here</a></p>
           <h3>(c):</h3>
           <p>The convolution can be defined as: 
             <math display="block" style="display:inline-block;">
@@ -919,7 +919,7 @@
             </mrow>
             </math>
           </p>
-          <p>You can only prove the inequality for z in the range of (0,1), after showing that, the proof is already finished.</p>
+          <p>You can first prove the inequality for z in the range of (0,1), after showing that, the proof is already finished.</p>
           <p>For z in the range of (0,1), the integral value range of x is determined by:</p>
           <p><math display="block" style="display:inline-block;">
             <mrow>
@@ -1247,6 +1247,122 @@
           <h3>(c):</h3>
           <p>By using the PDF of U and V, solve E[V-U]=E[V]-E[U]</p>
           <h2>Q3</h2>
+          <h3>(b):</h3>
+          <p>helpful formulas:</p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>V</mi>
+              <mi>a</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mi>a</mi>
+              <mi>X</mi>
+              <mo>+</mo>
+              <mi>b</mi>
+              <mi>Y</mi>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>a</mi>
+                <mn>2</mn>
+              </msup>
+              <mi>V</mi>
+              <mi>a</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mi>X</mi>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo>+</mo>
+              <msup>
+                <mi>b</mi>
+                <mn>2</mn>
+              </msup>
+              <mi>V</mi>
+              <mi>a</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mi>Y</mi>
+              <mo form="postfix" stretchy="false">]</mo>
+              <mo>+</mo>
+              <mn>2</mn>
+              <mi>a</mi>
+              <mi>b</mi>
+              <mi>C</mi>
+              <mi>o</mi>
+              <mi>v</mi>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mi>X</mi>
+              <mo separator="true">,</mo>
+              <mi>Y</mi>
+              <mo form="postfix" stretchy="false">]</mo>
+            </mrow>
+          </math></p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>ρ</mi>
+                <mrow>
+                  <mi>v</mi>
+                  <mi>w</mi>
+                </mrow>
+              </msub>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>C</mi>
+                  <mi>o</mi>
+                  <mi>v</mi>
+                  <mo form="prefix" stretchy="false">(</mo>
+                  <mi>V</mi>
+                  <mo separator="true">,</mo>
+                  <mi>W</mi>
+                  <mo form="postfix" stretchy="false">)</mo>
+                </mrow>
+                <mrow>
+                  <msub>
+                    <mi>σ</mi>
+                    <mi>v</mi>
+                  </msub>
+                  <msub>
+                    <mi>σ</mi>
+                    <mi>w</mi>
+                  </msub>
+                </mrow>
+              </mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>E</mi>
+                  <mo form="prefix" stretchy="false">[</mo>
+                  <mo form="prefix" stretchy="false">(</mo>
+                  <mi>V</mi>
+                  <mo>−</mo>
+                  <menclose notation="top" style="padding:0.1em 0 0 0;border-top:0.065em solid;">
+                    <mi>V</mi>
+                  </menclose>
+                  <mo form="postfix" stretchy="false">)</mo>
+                  <mo form="prefix" stretchy="false">(</mo>
+                  <mi>W</mi>
+                  <mo>−</mo>
+                  <menclose notation="top" style="padding:0.1em 0 0 0;border-top:0.065em solid;">
+                    <mi>W</mi>
+                  </menclose>
+                  <mo form="postfix" stretchy="false">)</mo>
+                  <mo form="postfix" stretchy="false">]</mo>
+                </mrow>
+                <mrow>
+                  <msub>
+                    <mi>σ</mi>
+                    <mi>v</mi>
+                  </msub>
+                  <msub>
+                    <mi>σ</mi>
+                    <mi>w</mi>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math></p>
           <h3>(d) and (e):</h3>
           <p>Method1: By having the joint PDF of V and W from (c), solve marginal PDF of W, and then solve the conditional PDF of V given W by:</p>
           <p><math display="block" style="display:inline-block;">
@@ -1293,7 +1409,7 @@
               </mfrac>
             </mrow>
           </math></p>
-          <p>Method2 (Simpler): By having E[V], E[W], Var[V], Var[W], and correlation coefficient of V and W, you should be able to utilize the formula in Lec30 Page4 to solve the conditional PDF of V given W.</p>
+          <p>Method2 (Simpler): By having E[V], E[W], Var[V], Var[W], and correlation coefficient of V and W from (a)(b)(c), you should be able to utilize the formula in Lec30 Page4 to solve the conditional PDF of V given W.</p>
           <h2>Q4</h2>
           <h3>(b):</h3>
           <p><math display="block" style="display:inline-block;">
