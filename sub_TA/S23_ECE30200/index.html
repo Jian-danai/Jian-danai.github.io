@@ -1528,6 +1528,254 @@
           </math></p>
           <p>Then, find the LMMSE, MMSE, MAP for "Y given X" by using formulas in Lec32-33.</p>
 
+
+          <h1>Computer Problem2 HINTs</h1>
+          <p>For 1(c), consider distribution method.</p>
+          <p>From 1(a) and (b), we know that: <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>Z</mi>
+                <mn>3</mn>
+              </msub>
+              <mo>=</mo>
+              <mn>2</mn>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>3</mn>
+              </msub>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>−</mo>
+              <mn>3</mn>
+            </mrow>
+          </math></p>
+          <p>We also know that: <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>S</mi>
+                <mn>3</mn>
+              </msub>
+              <mo>=</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>3</mn>
+              </msub>
+            </mrow>
+          </math></p>
+          <p>I recommend solving the pdf of <math display="block" style="display:inline-block;">
+            <msub>
+              <mi>S</mi>
+              <mn>3</mn>
+            </msub>
+          </math>, then solve the pdf of <math display="block" style="display:inline-block;">
+            <msub>
+              <mi>Z</mi>
+              <mn>3</mn>
+            </msub>
+          </math></p>
+          <p><math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>S</mi>
+                  <mn>3</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>s</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>S</mi>
+                <mn>3</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>s</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>P</mi>
+              <mi>r</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>3</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>s</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math></p>
+          <p>where <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>X</mi>
+                <mn>1</mn>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>3</mn>
+              </msub>
+              <mo>∈</mo>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mn>0,1</mn>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math></p>
+          <p>If you sketch the possible values of <math display="block" style="display:inline-block;">
+            <mrow>
+              <mo form="prefix" stretchy="false">(</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>1</mn>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msub>
+              <mo separator="true">,</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>3</mn>
+              </msub>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>, you will see they are in a cube.</p>
+          <p>The probability of <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>X</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>3</mn>
+              </msub>
+              <mo>≤</mo>
+              <mi>s</mi>
+            </mrow>
+          </math> is the remaining volume of the cube after cut by the plane <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>X</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>X</mi>
+                <mn>3</mn>
+              </msub>
+              <mo>=</mo>
+              <mi>s</mi>
+            </mrow>
+          </math></p>
+          <p>Some useful geometry facts from <a href="https://math.stackexchange.com/questions/454583/volume-of-cube-section-above-intersection-with-plane">stackexchange</a>, please don't simple copy the answer from there, because what we need is a little different.</p>
+          <p>After solving <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>F</mi>
+                <msub>
+                  <mi>S</mi>
+                  <mn>3</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>s</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>, take the derivate to have <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>f</mi>
+                <msub>
+                  <mi>S</mi>
+                  <mn>3</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>s</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>, then solve <math display="block" style="display:inline-block;">
+            <mrow>
+              <msub>
+                <mi>f</mi>
+                <msub>
+                  <mi>Z</mi>
+                  <mn>3</mn>
+                </msub>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>z</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math> by "function of a random variable" using either density method or distribution method. The transformation function is <math display="block" style="display:inline-block;">
+            <mrow>
+              <mi>z</mi>
+              <mo>=</mo>
+              <mi>g</mi>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>s</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+              <mo>=</mo>
+              <mn>2</mn>
+              <mi>s</mi>
+              <mo>−</mo>
+              <mn>3</mn>
+            </mrow>
+          </math></p>
+
         </p>
       </tr>
       </table>
